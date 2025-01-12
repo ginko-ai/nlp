@@ -1,0 +1,66 @@
+"""
+@startuml
+title classDiagram
+
+class LinguisticStructure {
+    +processInformation()
+    +analyzePatterns()
+}
+
+class Distortion {
+    +type: String
+    +method: String
+    +identifyPattern()
+    +challengeDistortion()
+}
+
+class MindReading {
+    +definition: String
+    +examples: List
+    +challenge: String
+    +validateAssumption()
+}
+
+class CauseEffect {
+    +trigger: String
+    +effect: String
+    +validateCausality()
+}
+
+class ComplexEquivalence {
+    +statementA: String
+    +statementB: String
+    +validateEquivalence()
+}
+
+class Generalization {
+    +type: String
+    +scope: String
+    +validateScope()
+}
+
+class ModalOperator {
+    +type: String
+    +necessity: Boolean
+    +possibility: Boolean
+    +evaluateOperator()
+}
+
+class Deletion {
+    +type: String
+    +missingInfo: String
+    +recoverInformation()
+}
+
+LinguisticStructure <|-- Distortion
+LinguisticStructure <|-- Generalization
+LinguisticStructure <|-- Deletion
+
+Distortion <|-- MindReading
+Distortion <|-- CauseEffect
+Distortion <|-- ComplexEquivalence
+
+Generalization <|-- ModalOperator
+
+@enduml
+"""

@@ -1,0 +1,36 @@
+"""
+@startuml
+title sequenceDiagram
+
+participant Input as "Linguistic Input"
+participant Processor as "Pattern Processor"
+participant Distortion as "Distortion Analyzer"
+participant Generalization as "Generalization Analyzer"
+participant Deletion as "Deletion Analyzer"
+participant Output as "Processed Output"
+
+Input -> Processor: Process linguistic pattern
+activate Processor
+
+Processor -> Distortion: Check for distortions
+activate Distortion
+Distortion --> Processor: Return distortion type
+deactivate Distortion
+
+Processor -> Generalization: Analyze generalizations
+activate Generalization
+Generalization --> Processor: Return generalization pattern
+deactivate Generalization
+
+Processor -> Deletion: Identify deletions
+activate Deletion
+Deletion --> Processor: Return deletion type
+deactivate Deletion
+
+Processor -> Processor: Compile analysis
+Processor -> Output: Return processed pattern
+
+deactivate Processor
+
+@enduml
+"""

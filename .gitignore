@@ -1,0 +1,18 @@
+# VS Code specific files
+.vscode/
+*.code-workspace
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+
+# Cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+logs/
