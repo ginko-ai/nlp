@@ -1,0 +1,48 @@
+"""
+@startuml
+title classDiagram
+
+class PromptVocabulary {
+    +categories: List
+    +get_verb_category(verb: str): str
+    +suggest_verbs(intent: str): List[str]
+}
+
+class ProcessingVerbs {
+    +analytical_verbs: Dict
+    +transformative_verbs: Dict
+    +optimization_verbs: Dict
+    +get_processing_verbs(category: str): List[str]
+}
+
+class ContentVerbs {
+    +creative_verbs: Dict
+    +directive_verbs: Dict
+    +get_content_verbs(type: str): List[str]
+}
+
+class ContextControl {
+    +qualifiers: Dict
+    +formatters: Dict
+    +scope_definers: Dict
+    +get_context_elements(context: str): List[str]
+}
+
+class ExecutionControl {
+    +roles: Dict
+    +chain_of_thought: Dict
+    +get_execution_parameters(task: str): Dict
+}
+
+PromptVocabulary <|-- ProcessingVerbs
+PromptVocabulary <|-- ContentVerbs
+PromptVocabulary <|-- ContextControl
+PromptVocabulary <|-- ExecutionControl
+
+note right of PromptVocabulary
+    Core vocabulary management system
+    for prompt engineering
+end note
+
+@enduml
+"""
