@@ -1,0 +1,44 @@
+"""
+@startuml
+title sequenceDiagram
+
+participant "Prompt Input" as PI
+participant "Task Analyzer" as TA
+participant "Context Engine" as CE
+participant "Validation System" as VS
+participant "Processing Engine" as PE
+participant "Output Manager" as OM
+
+== Initialization Phase ==
+PI -> TA: Parse Prompt
+TA -> TA: Decompose Task
+TA -> CE: Request Context
+
+== Context Loading Phase ==
+CE -> CE: Load User Profile
+CE -> CE: Load Domain Knowledge
+CE -> CE: Apply Historical Data
+CE --> TA: Return Enriched Context
+
+== Validation Phase ==
+TA -> VS: Validate Requirements
+VS -> VS: Check Constraints
+VS -> VS: Verify Dependencies
+VS --> TA: Validation Results
+
+== Processing Phase ==
+TA -> PE: Submit Task
+PE -> PE: Apply Transformations
+PE -> PE: Process Sub-tasks
+PE -> VS: Validate Intermediate Results
+VS --> PE: Validation Status
+
+== Output Phase ==
+PE -> OM: Format Results
+OM -> OM: Apply Templates
+OM -> VS: Final Validation
+VS --> OM: Validation Complete
+OM --> PI: Return Formatted Output
+
+@enduml
+"""

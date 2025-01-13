@@ -1,0 +1,118 @@
+"""
+@startuml
+title classDiagram
+
+package "O1 Prompt Core" {
+    class O1PromptSystem {
+        +initialize_components()
+        +process_prompt()
+        +validate_output()
+        +handle_errors()
+    }
+
+    class Goal {
+        +task_definition
+        +scope_boundaries
+        +success_metrics
+        +define_goal()
+        +validate_completion()
+    }
+
+    class GoalProcessor {
+        +parse_objectives()
+        +set_boundaries()
+        +define_metrics()
+        +track_progress()
+    }
+
+    class ReturnFormat {
+        +data_schema
+        +output_template
+        +formatting_rules
+        +validate_format()
+        +generate_template()
+    }
+
+    class FormatProcessor {
+        +parse_requirements()
+        +build_schema()
+        +apply_rules()
+        +verify_output()
+    }
+
+    class Warnings {
+        +validation_rules
+        +error_conditions
+        +quality_checks
+        +process_warnings()
+        +validate_input()
+    }
+
+    class WarningProcessor {
+        +check_inputs()
+        +verify_outputs()
+        +handle_edge_cases()
+        +ensure_quality()
+    }
+
+    class ContextDump {
+        +user_profile
+        +interaction_history
+        +environment_state
+        +process_context()
+        +update_state()
+    }
+
+    class ContextProcessor {
+        +analyze_background()
+        +track_state()
+        +integrate_history()
+        +apply_context()
+    }
+}
+
+package "Processing Engine" {
+    class ProcessingSystem {
+        +language_processor
+        +pattern_analyzer
+        +output_generator
+        +process_input()
+        +generate_output()
+    }
+
+    class LinguisticProcessor {
+        +parse_structure()
+        +analyze_semantics()
+        +process_grammar()
+    }
+
+    class TransformerEngine {
+        +attention_mechanism
+        +context_processing
+        +pattern_matching
+    }
+
+    class OutputManager {
+        +format_output()
+        +validate_result()
+        +apply_templates()
+    }
+}
+
+O1PromptSystem *-- Goal
+O1PromptSystem *-- ReturnFormat
+O1PromptSystem *-- Warnings
+O1PromptSystem *-- ContextDump
+O1PromptSystem --> ProcessingSystem
+
+Goal *-- GoalProcessor
+ReturnFormat *-- FormatProcessor
+Warnings *-- WarningProcessor
+ContextDump *-- ContextProcessor
+
+ProcessingSystem *-- LinguisticProcessor
+ProcessingSystem *-- TransformerEngine
+ProcessingSystem *-- OutputManager
+
+@enduml
+"""

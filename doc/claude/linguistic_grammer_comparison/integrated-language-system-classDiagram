@@ -1,0 +1,68 @@
+"""
+@startuml
+title classDiagram
+
+class LanguageSystem {
+    +natural_language_processing
+    +artificial_language_processing
+    +hybrid_processing
+}
+
+class Linguistics {
+    +distortions
+    +generalizations
+    +deletions
+    +analyze_patterns()
+    +process_meaning()
+}
+
+class Grammar {
+    +morphology
+    +syntax
+    +semantics
+    +validate_structure()
+}
+
+class PromptEngineering {
+    +analytical_verbs
+    +transformative_verbs
+    +optimization_verbs
+    +creative_verbs
+    +directive_verbs
+    +design_prompt()
+    +optimize_instruction()
+}
+
+class TransformerArchitecture {
+    +attention_mechanisms
+    +positional_encoding
+    +self_attention
+    +multi_head_attention
+    +feed_forward_networks
+    +process_sequence()
+    +compute_attention()
+}
+
+class VerbalElements {
+    +Analytical
+    +Transformative
+    +Creative
+    +process_verb_type()
+}
+
+class AttentionMechanisms {
+    +Self
+    +Cross
+    +Multi_Head
+    +compute_attention_scores()
+}
+
+LanguageSystem <|-- Linguistics
+LanguageSystem <|-- Grammar
+LanguageSystem <|-- PromptEngineering
+PromptEngineering *-- VerbalElements
+PromptEngineering --> TransformerArchitecture
+TransformerArchitecture *-- AttentionMechanisms
+
+@enduml
+"""

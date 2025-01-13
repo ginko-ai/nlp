@@ -1,0 +1,49 @@
+"""
+@startuml
+title classDiagram
+
+class LanguageSystem {
+    +communication_patterns
+    +rules
+    +structures
+}
+
+class Linguistics {
+    +mental_processing
+    +meaning_creation
+    +pattern_recognition
+    +analyze_distortions()
+    +identify_generalizations()
+    +process_deletions()
+}
+
+class Grammar {
+    +rules
+    +conventions
+    +structures
+    +apply_morphology()
+    +check_syntax()
+    +verify_semantics()
+}
+
+class LinguisticProcesses {
+    +Distortions
+    +Generalizations
+    +Deletions
+}
+
+class GrammaticalElements {
+    +Morphology
+    +Syntax
+    +Semantics
+    +Phonology
+    +Pragmatics
+}
+
+LanguageSystem <|-- Linguistics
+LanguageSystem <|-- Grammar
+Linguistics *-- LinguisticProcesses
+Grammar *-- GrammaticalElements
+
+@enduml
+"""

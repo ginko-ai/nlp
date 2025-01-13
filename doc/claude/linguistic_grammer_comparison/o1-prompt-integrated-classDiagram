@@ -1,0 +1,62 @@
+"""
+@startuml
+title classDiagram
+
+class O1PromptSystem {
+    +goal_definition
+    +return_format
+    +warnings
+    +context
+    +process_prompt()
+    +validate_output()
+}
+
+class Goal {
+    +objective
+    +constraints
+    +success_criteria
+    +define_goal()
+    +check_completion()
+}
+
+class ReturnFormat {
+    +structure_requirements
+    +data_types
+    +formatting_rules
+    +validate_format()
+    +apply_template()
+}
+
+class Warnings {
+    +validation_rules
+    +error_checks
+    +quality_criteria
+    +check_constraints()
+    +validate_input()
+}
+
+class ContextDump {
+    +background_info
+    +user_state
+    +history
+    +preferences
+    +provide_context()
+    +update_state()
+}
+
+class PromptProcessor {
+    +linguistic_analyzer
+    +grammar_checker
+    +transformer
+    +process_input()
+    +generate_output()
+}
+
+O1PromptSystem *-- Goal
+O1PromptSystem *-- ReturnFormat
+O1PromptSystem *-- Warnings
+O1PromptSystem *-- ContextDump
+O1PromptSystem --> PromptProcessor
+
+@enduml
+"""
